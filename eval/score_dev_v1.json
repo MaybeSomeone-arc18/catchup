@@ -8,7 +8,7 @@
   "gold_hit": 15,
   "recall": 0.385,
   "model_used": 4,
-  "median_secs": 7.2
+  "median_secs": 6.8
  },
  "rows": [
   {
@@ -28,7 +28,7 @@
   {
    "sample": "cricket.txt",
    "src": "gemma",
-   "secs": 5.4,
+   "secs": 5.2,
    "gold": 5,
    "hit": 1,
    "missed": [
@@ -43,7 +43,7 @@
   {
    "sample": "exam-group.txt",
    "src": "gemma",
-   "secs": 8.0,
+   "secs": 7.6,
    "gold": 5,
    "hit": 0,
    "missed": [
@@ -59,7 +59,7 @@
   {
    "sample": "family.txt",
    "src": "template",
-   "secs": 4.7,
+   "secs": 4.4,
    "gold": 4,
    "hit": 3,
    "missed": [
@@ -71,7 +71,7 @@
   {
    "sample": "flatmates.txt",
    "src": "gemma",
-   "secs": 6.6,
+   "secs": 6.3,
    "gold": 8,
    "hit": 2,
    "missed": [
@@ -88,7 +88,7 @@
   {
    "sample": "goa-trip.txt",
    "src": "template",
-   "secs": 8.5,
+   "secs": 8.1,
    "gold": 6,
    "hit": 2,
    "missed": [
@@ -103,7 +103,7 @@
   {
    "sample": "project-team.txt",
    "src": "template",
-   "secs": 7.7,
+   "secs": 7.2,
    "gold": 5,
    "hit": 4,
    "missed": [
@@ -115,7 +115,7 @@
   {
    "sample": "quiet-night.txt",
    "src": "template",
-   "secs": 5.3,
+   "secs": 5.0,
    "gold": 0,
    "hit": 0,
    "missed": [],

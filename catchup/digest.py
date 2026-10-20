@@ -13,8 +13,10 @@ TIME = re.compile(r"\b\d{1,2}(:\d{2})?\s?(am|pm)\b|\b\d{1,2}:\d{2}\b|\b(mon|tues
 NUM = re.compile(r"\b\d{3,}\b|\b\d{1,2} (confirmed|beds|people)\b", re.I)
 DECIDE = re.compile(r"\b(booked|done|confirmed|moved|decided|bring|i'll|will|need|needs|must|max|have to|someone|closes|due)\b", re.I)
 ASK = re.compile(r"\?")
+# v3: statements about a problem or a cause carry no time or question, so v2 skipped them
+PROBLEM = re.compile(r"\b(stuck|broken|down|not working|doesn't work|bug|cause|found the|fix|leak|noise|noisy|out of|missing|lost|cancelled|closed|closes|late|delay|delayed)\b", re.I)
 
-def digest_lines(chat: Chat, you: str = "", cap: int = 10):
+def digest_lines(chat: Chat, you: str = "", cap: int = 10, v3: bool = False):
     scored = []
     for i, m in enumerate(chat.human):
         if m.media:
@@ -24,6 +26,7 @@ def digest_lines(chat: Chat, you: str = "", cap: int = 10):
         if TIME.search(t) or NUM.search(t): tags.append("when/how much")
         if ASK.search(t): tags.append("question")
         if DECIDE.search(t): tags.append("plan")
+        if v3 and PROBLEM.search(t): tags.append("problem")
         if you and you.lower() in t.lower(): tags.append("you")
         if tags:
             scored.append((len(tags), i, m, tags))
@@ -45,9 +48,9 @@ def gist_ok(g: str, chat: Chat) -> bool:
     if re.search(r"\d", g): return False
     return valid(g, chat, max_words=24)
 
-def render(chat: Chat, llm=None, you: str = ""):
+def render(chat: Chat, llm=None, you: str = "", v3: bool = True):
     s = stats(chat)
-    lines = digest_lines(chat, you)
+    lines = digest_lines(chat, you, cap=12 if v3 else 10, v3=v3)
     head = f"{s['messages']} messages, {len(s['senders'])} people, {s['first']} to {s['last']}."
     out = [head]
     src = "rules"

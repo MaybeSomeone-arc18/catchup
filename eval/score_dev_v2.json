@@ -1,0 +1,98 @@
+{
+ "summary": {
+  "version": "v2",
+  "set": "dev",
+  "model": "gemma3-1b-q4",
+  "samples": 8,
+  "gold_total": 39,
+  "gold_hit": 37,
+  "recall": 0.949,
+  "model_used": 6,
+  "median_secs": 4.0
+ },
+ "rows": [
+  {
+   "sample": "club.txt",
+   "src": "rules",
+   "secs": 5.6,
+   "gold": 6,
+   "hit": 6,
+   "missed": [],
+   "output": "11 messages, 4 people, 10/19/26, 6:01 PM to 10/19/26, 6:35 PM.\nLines worth reading (verbatim):\n- Ishaan: robotics club meet moved to room 204, tuesday 5 pm\n- Meera: why the change? is 101 booked?\n- Zubin: do we need laptops?\n- Ishaan: yes bring laptops and the arduino kits\n- Meera: kits are with Dhruv, who has the lab key?\n- Dhruv: i have the key, will open at 4:30\n- Ishaan: also registration for the hackathon closes friday midnight\n- Meera: team of 4 right? we are only 3\n- Ishaan: max 4, find one more",
+   "chat": "10/19/26, 6:01 PM - Ishaan: robotics club meet moved to room 204, tuesday 5 pm\n10/19/26, 6:03 PM - Meera: why the change? is 101 booked?\n10/19/26, 6:05 PM - Ishaan: yes, the placement talk is there\n10/19/26, 6:06 PM - Zubin: do we need laptops?\n10/19/26, 6:08 PM - Ishaan: yes bring laptops and the arduino kits\n10/19/26, 6:10 PM - Meera: kits are with Dhruv, who has the lab key?\n10/19/26, 6:15 PM - Dhruv: i have the key, will open at 4:30\n10/19/26, 6:16 PM - Zubin: thanks\n10/19/26, 6:30 PM - Ishaan: also registration for the hackathon closes friday midnight\n10/19/26, 6:31 PM - Meera: team of 4 right? we are only 3\n10/19/26, 6:35 PM - Ishaan: max 4, find one more\n"
+  },
+  {
+   "sample": "cricket.txt",
+   "src": "gemma",
+   "secs": 4.0,
+   "gold": 5,
+   "hit": 5,
+   "missed": [],
+   "output": "9 messages, 3 people, 10/19/26, 7:05 AM to 10/19/26, 7:31 AM.\nGist: The group is discussing a Sunday morning game at a specific location, involving a cousin, stumps, a ball, and the fee for the ground.\nLines worth reading (verbatim):\n- Rahul: match sunday 7 am at the north ground\n- Imran: are we 11 or short again?\n- Rahul: 9 confirmed so far, need 2 more\n- Rahul: great, ground fee is 150 each\n- Imran: who is bringing the stumps and the ball?\n- Vivek: i have stumps, someone bring a new ball\n- Rahul: i'll get the ball\n- Imran: umpire?",
+   "chat": "10/19/26, 7:05 AM - Rahul: match sunday 7 am at the north ground\n10/19/26, 7:06 AM - Imran: are we 11 or short again?\n10/19/26, 7:08 AM - Rahul: 9 confirmed so far, need 2 more\n10/19/26, 7:10 AM - Vivek: my cousin can play, he is decent\n10/19/26, 7:11 AM - Rahul: great, ground fee is 150 each\n10/19/26, 7:15 AM - Imran: who is bringing the stumps and the ball?\n10/19/26, 7:16 AM - Vivek: i have stumps, someone bring a new ball\n10/19/26, 7:30 AM - Rahul: i'll get the ball\n10/19/26, 7:31 AM - Imran: umpire?\n"
+  },
+  {
+   "sample": "exam-group.txt",
+   "src": "gemma",
+   "secs": 4.2,
+   "gold": 5,
+   "hit": 5,
+   "missed": [],
+   "output": "12 messages, 4 people, 10/19/26, 11:30 PM to 10/20/26, 12:05 AM.\nGist: This chat discusses a deadline for an assignment, a test covering specific units, and a study call for tomorrow.\nLines worth reading (verbatim):\n- Prof Mehta: Reminder: assignment 4 deadline moved to wednesday 6 pm\n- Karthik: does wednesday's test cover unit 5 as well?\n- Prof Mehta: Units 3 and 4 only. Unit 5 will be in the next quiz\n- Sneha: my notes for unit 3, in case anyone needs\n- Arjun: can someone explain the deadlock question from the sample paper?\n- Karthik: study call tomorrow at 7 pm? library or online?",
+   "chat": "10/19/26, 11:30 PM - Prof Mehta: Reminder: assignment 4 deadline moved to wednesday 6 pm\n10/19/26, 11:31 PM - Karthik: does wednesday's test cover unit 5 as well?\n10/19/26, 11:33 PM - Prof Mehta: Units 3 and 4 only. Unit 5 will be in the next quiz\n10/19/26, 11:35 PM - Sneha: thank god\n10/19/26, 11:36 PM - Sneha: <Media omitted>\n10/19/26, 11:36 PM - Sneha: my notes for unit 3, in case anyone needs\n10/19/26, 11:38 PM - Karthik: you're a lifesaver\n10/19/26, 11:40 PM - Arjun: can someone explain the deadlock question from the sample paper?\n10/19/26, 11:52 PM - Sneha: it's the banker's algorithm one, check page 3 of my notes\n10/19/26, 11:55 PM - Arjun: got it, thanks!\n10/20/26, 12:03 AM - Karthik: study call tomorrow at 7 pm? library or online?\n10/20/26, 12:05 AM - Sneha: online works for me\n"
+  },
+  {
+   "sample": "family.txt",
+   "src": "gemma",
+   "secs": 3.8,
+   "gold": 4,
+   "hit": 4,
+   "missed": [],
+   "output": "11 messages, 3 people, 10/19/26, 7:15 AM to 10/19/26, 10:01 PM.\nGist: This is a chat about a birthday celebration and a call regarding a delivery of a cake and a plumber\u2019s visit.\nLines worth reading (verbatim):\n- Ma: did anyone call didi yesterday? it was her birthday\n- Papa: plumber is coming tomorrow between 10 and 11, someone needs to be home\n- Ma: rohan can you be home? i have yoga\n- Rohan: ok i'll stay back\n- Papa: gas cylinder delivered, paid 1106",
+   "chat": "10/19/26, 7:15 AM - Ma: good morning everyone\n10/19/26, 7:16 AM - Ma: did anyone call didi yesterday? it was her birthday\n10/19/26, 7:20 AM - Rohan: i called in the evening\n10/19/26, 7:45 AM - Papa: plumber is coming tomorrow between 10 and 11, someone needs to be home\n10/19/26, 8:02 AM - Ma: rohan can you be home? i have yoga\n10/19/26, 8:30 AM - Rohan: ok i'll stay back\n10/19/26, 6:15 PM - Papa: gas cylinder delivered, paid 1106\n10/19/26, 6:16 PM - Ma: ok\n10/19/26, 9:55 PM - Ma: <Media omitted>\n10/19/26, 9:56 PM - Ma: didi's cake, she said thanks for the call\n10/19/26, 10:01 PM - Rohan: looks great\n"
+  },
+  {
+   "sample": "flatmates.txt",
+   "src": "gemma",
+   "secs": 4.1,
+   "gold": 8,
+   "hit": 8,
+   "missed": [],
+   "output": "12 messages, 3 people, 10/19/26, 8:10 PM to 10/19/26, 8:51 PM.\nGist: This chat discusses ongoing issues with rent, a new geyser installation, and a request for a technician visit.\nLines worth reading (verbatim):\n- Tanvi: rent is 18000 this month, due on the 5th\n- Kabir: who is paying the landlord? last time i did\n- Nisha: i'll pay him, send me your share by thursday\n- Tanvi: sending 6000 now\n- Kabir: wifi is down again, anyone called the provider?\n- Nisha: i did, technician comes saturday between 2 and 4\n- Kabir: someone has to be home then, i'm out\n- Tanvi: i'll be home\n- Kabir: new geyser quote, 4500 installed\n- Kabir: ok will ask tomorrow",
+   "chat": "10/19/26, 8:10 PM - Tanvi: rent is 18000 this month, due on the 5th\n10/19/26, 8:12 PM - Kabir: who is paying the landlord? last time i did\n10/19/26, 8:14 PM - Nisha: i'll pay him, send me your share by thursday\n10/19/26, 8:15 PM - Tanvi: sending 6000 now\n10/19/26, 8:20 PM - Kabir: wifi is down again, anyone called the provider?\n10/19/26, 8:25 PM - Nisha: i did, technician comes saturday between 2 and 4\n10/19/26, 8:26 PM - Kabir: someone has to be home then, i'm out\n10/19/26, 8:30 PM - Tanvi: i'll be home\n10/19/26, 8:41 PM - Kabir: <Media omitted>\n10/19/26, 8:42 PM - Kabir: new geyser quote, 4500 installed\n10/19/26, 8:50 PM - Nisha: too much, get another quote\n10/19/26, 8:51 PM - Kabir: ok will ask tomorrow\n"
+  },
+  {
+   "sample": "goa-trip.txt",
+   "src": "gemma",
+   "secs": 5.8,
+   "gold": 6,
+   "hit": 4,
+   "missed": [
+    "20:15",
+    "tickets"
+   ],
+   "output": "18 messages, 3 people, 10/19/26, 9:03 PM to 10/19/26, 9:45 PM.\nGist: The group is discussing finalizing a travel plan, including booking accommodations, transportation, and confirming details for a trip.\nLines worth reading (verbatim):\n- Riya: ok so are we finalising the goa plan tonight or what\n- Aisha: i'm in, can we leave friday night instead of saturday morning?\n- Riya: friday night works, bus or train?\n- Dev: train, cheaper. 12619 leaves 21:35\n- Aisha: this hostel has free cancellation till thursday\n- Riya: book it for 4 then, i'll send my share tonight\n- Dev: wait, are we 4 or 5? is manav coming?\n- Riya: manav said he'll confirm by tomorrow morning\n- Aisha: so do we book 4 beds now or wait for him?\n- Dev: done, 4 beds fri-sun, 2400 total",
+   "chat": "10/19/26, 9:02 PM - Riya: Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them.\n10/19/26, 9:03 PM - Riya: ok so are we finalising the goa plan tonight or what\n10/19/26, 9:03 PM - Dev: yes pls i have lab till 8\n10/19/26, 9:04 PM - Aisha: i'm in, can we leave friday night instead of saturday morning?\n10/19/26, 9:05 PM - Riya: friday night works, bus or train?\n10/19/26, 9:07 PM - Dev: train, cheaper. 12619 leaves 21:35\n10/19/26, 9:08 PM - Aisha: <Media omitted>\n10/19/26, 9:08 PM - Aisha: this hostel has free cancellation till thursday\n10/19/26, 9:10 PM - Riya: book it for 4 then, i'll send my share tonight\n10/19/26, 9:12 PM - Dev: wait, are we 4 or 5? is manav coming?\n10/19/26, 9:15 PM - Riya: manav said he'll confirm by tomorrow morning\n10/19/26, 9:16 PM - Aisha: so do we book 4 beds now or wait for him?\n10/19/26, 9:20 PM - Riya: book 4 now, free cancellation anyway. dev can you do it?\n10/19/26, 9:22 PM - Dev: done, 4 beds fri-sun, 2400 total\n10/19/26, 9:23 PM - Aisha: nice. what about the cab to the station?\n10/19/26, 9:40 PM - Riya: cab at 20:15 friday from campus gate, don't be late\n10/19/26, 9:41 PM - Dev: who has the train tickets? did anyone book?\n10/19/26, 9:44 PM - Riya: not yet. booking them tomorrow after manav confirms\n10/19/26, 9:45 PM - Dev: ok. someone remind me to pack the speaker\n"
+  },
+  {
+   "sample": "project-team.txt",
+   "src": "gemma",
+   "secs": 3.6,
+   "gold": 5,
+   "hit": 5,
+   "missed": [],
+   "output": "11 messages, 3 people, 10/19/26, 10:02 PM to 10/19/26, 10:22 PM.\nGist: The group is discussing a presentation about a demo, with a focus on the architecture slide and a potential backup video.\nLines worth reading (verbatim):\n- Aman: demo is thursday 11 am, slot 3\n- Pooja: slides still not done, i have the intro and results\n- Sid: i'll do the architecture slide tonight\n- Aman: who is presenting the live demo?\n- Sid: fine but the server crashed twice today\n- Aman: did you fix the db timeout?\n- Sid: not yet, will push a fix by wednesday night\n- Aman: good idea, 2 min max",
+   "chat": "10/19/26, 10:02 PM - Aman: demo is thursday 11 am, slot 3\n10/19/26, 10:03 PM - Pooja: slides still not done, i have the intro and results\n10/19/26, 10:05 PM - Sid: i'll do the architecture slide tonight\n10/19/26, 10:06 PM - Aman: who is presenting the live demo?\n10/19/26, 10:08 PM - Pooja: sid, he wrote the backend\n10/19/26, 10:09 PM - Sid: fine but the server crashed twice today\n10/19/26, 10:12 PM - Aman: did you fix the db timeout?\n10/19/26, 10:14 PM - Sid: not yet, will push a fix by wednesday night\n10/19/26, 10:20 PM - Pooja: record a backup video just in case\n10/19/26, 10:21 PM - Aman: good idea, 2 min max\n10/19/26, 10:22 PM - Sid: <Media omitted>\n"
+  },
+  {
+   "sample": "quiet-night.txt",
+   "src": "rules",
+   "secs": 0.0,
+   "gold": 0,
+   "hit": 0,
+   "missed": [],
+   "output": "3 messages, 2 people, 10/19/26, 10:05 PM to 10/19/26, 10:20 PM.\nNothing needs you.",
+   "chat": "10/19/26, 10:05 PM - Zoya: gn everyone\n10/19/26, 10:06 PM - Hamza: gn\n10/19/26, 10:20 PM - Zoya: <Media omitted>\n"
+  }
+ ]
+}

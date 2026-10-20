@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>catchup - read your group chats so you don't have to</title>
+<style>
+:root{--ink:#2b2620;--paper:#f5f1e8;--soft:#e8e0d0;--accent:#6f8255;--muted:#7d7466}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 ui-rounded,"SF Mono",Menlo,Consolas,monospace}
+main{max-width:720px;margin:0 auto;padding:48px 20px 96px}h1{font-size:44px;margin:0 0 4px;letter-spacing:-1px}h1 .z{color:var(--accent)}
+.tag{color:var(--muted);margin-bottom:28px}
+textarea{width:100%;min-height:170px;background:#fffdf7;color:var(--ink);border:2px solid var(--soft);border-radius:12px;padding:14px;font:14px/1.5 ui-monospace,Menlo,monospace;resize:vertical}
+textarea:focus{outline:none;border-color:var(--accent)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0;align-items:center}
+input[type=text]{flex:1;min-width:160px;background:#fffdf7;border:2px solid var(--soft);border-radius:10px;padding:10px 12px;font:inherit}
+button{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:11px 18px;font:inherit;cursor:pointer}
+button.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.brief{white-space:pre-wrap;background:#fffdf7;border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:16px 18px;margin-top:18px;display:none}
+.note{color:var(--muted);font-size:13px;margin-top:6px}
+.sample{border-top:1px solid var(--soft);padding:18px 0}.sample h3{margin:0 0 8px;font-size:17px}
+.gemma{white-space:pre-wrap;background:var(--soft);border-radius:12px;padding:14px 16px;margin-top:8px}
+.label{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;background:var(--ink);color:var(--paper);border-radius:6px;padding:2px 8px}
+.label.fb{background:var(--muted)}
+footer{margin-top:56px;color:var(--muted);font-size:13px;border-top:1px solid var(--soft);padding-top:18px}a{color:var(--accent)}
+</style></head><body><main>
+<h1>catchup<span class="z">.</span></h1>
+<p class="tag">a short morning brief for the group chats you didn't read.<br>paste a whatsapp export below. nothing leaves this page: no server, no upload.</p>
+<textarea id="chat" placeholder="paste your exported chat here, or load a sample below"></textarea>
+<div class="row"><input type="text" id="you" placeholder="your name in the chat (optional)"><button id="go">read it for me</button></div>
+<p class="note">this page runs the rules-only brief. the gemma 3 1b brief runs offline in the CLI; its real output on the samples is below, including where it is wrong.</p>
+<div class="brief" id="out"></div>
+<div id="samples"><h2 style="font-size:20px;margin-top:40px">what the local model said</h2>
+<p class="note">gemma 3 1b (q4_k_m) via llama.cpp, 2-core 2 GB sandbox, 4 synthetic chats. "passed source check" means no invented names or numbers. it does not mean the summary is right.</p></div>
+<footer>hacktoberfest week 3, slow and steady. open-weight model, plain rules, no servers.<br><a href="https://github.com/MaybeSomeone-arc18/catchup">code</a></footer>
+</main>
+<script src="app.js"></script><script src="precomputed.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+$("go").onclick=()=>{const m=parse($("chat").value),o=$("out");o.style.display="block";
+ o.textContent=m.length?templateBrief(m,$("you").value.trim()):"couldn't read that export. expecting lines like '10/19/26, 9:03 PM - Riya: hi'";};
+for(const s of PRECOMPUTED){const d=document.createElement("div");d.className="sample";
+ const ok=s.src==="gemma";
+ d.innerHTML=`<h3></h3><button class="ghost">load this chat</button><div style="height:10px"></div><span class="label ${ok?"":"fb"}"></span><div class="gemma"></div>`;
+ d.querySelector("h3").textContent=s.name;
+ d.querySelector(".label").textContent=ok?`gemma 3 1b · ${s.secs}s · passed source check`:`checker rejected model output · template used · ${s.secs}s`;
+ d.querySelector(".gemma").textContent=s.brief;
+ d.querySelector("button").onclick=()=>{$("chat").value=s.chat;window.scrollTo({top:0,behavior:"smooth"});};
+ $("samples").appendChild(d);}
+</script></body></html>

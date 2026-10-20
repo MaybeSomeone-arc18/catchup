@@ -8,13 +8,13 @@
   "gold_hit": 22,
   "recall": 0.917,
   "model_used": 4,
-  "median_secs": 3.4
+  "median_secs": 3.5
  },
  "rows": [
   {
    "sample": "office.txt",
    "src": "gemma",
-   "secs": 4.0,
+   "secs": 4.3,
    "gold": 6,
    "hit": 5,
    "missed": [
@@ -26,7 +26,7 @@
   {
    "sample": "society.txt",
    "src": "gemma",
-   "secs": 2.9,
+   "secs": 3.1,
    "gold": 7,
    "hit": 6,
    "missed": [

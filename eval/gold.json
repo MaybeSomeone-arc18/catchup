@@ -1,0 +1,10 @@
+{
+ "goa-trip.txt": ["friday", "21:35", "20:15", "2400", "tickets", "manav"],
+ "exam-group.txt": ["6 pm", "unit 5", "units 3 and 4", "7 pm", "online"],
+ "family.txt": ["10 and 11", "1106", "rohan", "plumber"],
+ "quiet-night.txt": [],
+ "flatmates.txt": ["18000", "5th", "thursday", "saturday", "2 and 4", "4500", "wifi", "tanvi"],
+ "club.txt": ["204", "tuesday 5 pm", "laptops", "4:30", "friday midnight", "max 4"],
+ "project-team.txt": ["thursday 11 am", "wednesday night", "backup video", "db timeout", "sid"],
+ "cricket.txt": ["sunday 7 am", "150", "9 confirmed", "ball", "umpire"]
+}

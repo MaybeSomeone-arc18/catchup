@@ -32,3 +32,32 @@ def test_template(): t = template(parse(GOA)); assert "Riya" in t and "Dev" in t
 def test_template_quiet(): assert "Nothing urgent" in template(parse("10/19/26, 10:05 PM - Zoya: gn\n10/19/26, 10:06 PM - Hamza: gn"))
 def test_fallback(): assert make(parse(GOA), llm=Fake("Neha booked everything for 500."))[1] == "template"
 def test_model_ok(): assert make(parse(GOA), llm=Fake("Mostly the goa plan.\nTrain tickets wait for manav.\nNothing waiting."))[1] == "gemma"
+
+# --- v2 digest ---
+from catchup.digest import digest_lines, gist_ok, render
+def test_digest_picks_time_and_questions():
+    c = parse(GOA); out = [m.text for m, _ in digest_lines(c)]
+    assert any("21:35" in t for t in out) and any("tickets" in t for t in out)
+def test_digest_skips_media_and_chatter():
+    c = parse("10/19/26, 9:00 PM - A: gn\n10/19/26, 9:01 PM - B: <Media omitted>")
+    assert digest_lines(c) == []
+def test_digest_cap():
+    msgs = "\n".join(f"10/19/26, 9:{i:02d} PM - A: meet at {i%12+1} pm?" for i in range(30))
+    assert len(digest_lines(parse(msgs), cap=10)) == 10
+def test_digest_is_verbatim():
+    c = parse(GOA); texts = {m.text for m in c.human}
+    assert all(m.text in texts for m, _ in digest_lines(c))
+def test_gist_rejects_names_and_numbers():
+    c = parse(GOA)
+    assert not gist_ok("Riya is planning a trip.", c)
+    assert not gist_ok("A trip on 12 days.", c)
+    assert gist_ok("The group is planning a trip.", c)
+def test_render_quiet_chat():
+    out, src = render(parse("10/19/26, 10:05 PM - Zoya: gn\n10/19/26, 10:06 PM - Hamza: gn"))
+    assert "Nothing needs you" in out and src == "rules"
+def test_render_uses_valid_gist():
+    out, src = render(parse(GOA), llm=Fake("The group is planning a trip."))
+    assert src == "gemma" and "Gist: The group is planning a trip." in out
+def test_render_drops_bad_gist():
+    out, src = render(parse(GOA), llm=Fake("Riya booked 5 tickets."))
+    assert src == "rules" and "Gist" not in out

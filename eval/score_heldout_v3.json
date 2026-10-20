@@ -1,0 +1,55 @@
+{
+ "summary": {
+  "version": "v3",
+  "set": "heldout",
+  "model": "gemma3-1b-q4",
+  "samples": 4,
+  "gold_total": 24,
+  "gold_hit": 24,
+  "recall": 1.0,
+  "model_used": 4,
+  "median_secs": 3.6
+ },
+ "rows": [
+  {
+   "sample": "office.txt",
+   "src": "gemma",
+   "secs": 4.2,
+   "gold": 6,
+   "hit": 6,
+   "missed": [],
+   "output": "11 messages, 4 people, 10/19/26, 11:00 AM to 10/19/26, 2:01 PM.\nGist: This is a group chat discussing updates, including a stand-up schedule, a bug fix, and a client call.\nLines worth reading (verbatim):\n- Manager Priya: standup moved to 10:30 tomorrow, join the usual link\n- Deepak: can i skip? i have the dentist at 10\n- Anita: release is blocked on the payment bug, ETA wednesday evening\n- Deepak: who owns the payment bug?\n- Rohit: found the cause, a null in the webhook. fix in review\n- Manager Priya: great. reviewers please look today\n- Manager Priya: client call friday 4 pm, Anita please prepare the demo",
+   "chat": "10/19/26, 11:00 AM - Manager Priya: standup moved to 10:30 tomorrow, join the usual link\n10/19/26, 11:02 AM - Deepak: can i skip? i have the dentist at 10\n10/19/26, 11:03 AM - Manager Priya: send me your update in writing then\n10/19/26, 11:10 AM - Anita: release is blocked on the payment bug, ETA wednesday evening\n10/19/26, 11:12 AM - Deepak: who owns the payment bug?\n10/19/26, 11:13 AM - Anita: me and Rohit\n10/19/26, 11:20 AM - Rohit: found the cause, a null in the webhook. fix in review\n10/19/26, 11:21 AM - Manager Priya: great. reviewers please look today\n10/19/26, 11:30 AM - Deepak: reviewing now\n10/19/26, 2:00 PM - Manager Priya: client call friday 4 pm, Anita please prepare the demo\n10/19/26, 2:01 PM - Anita: ok\n"
+  },
+  {
+   "sample": "society.txt",
+   "src": "gemma",
+   "secs": 3.2,
+   "gold": 7,
+   "hit": 7,
+   "missed": [],
+   "output": "10 messages, 5 people, 10/19/26, 5:30 PM to 10/19/26, 6:11 PM.\nGist: The group is discussing a water supply interruption and a community event.\nLines worth reading (verbatim):\n- Secretary: water supply will be off on 22nd from 9 am to 1 pm for tank cleaning\n- Mr Nair: diwali cleanup committee meets saturday 6 pm at the clubhouse\n- Mrs Iyer: who is collecting the 300 per flat for lights?\n- Secretary: Mr Nair is collecting, pay by 25th\n- Mr Gill: lift in block B stuck again\n- Secretary: technician called, will come tomorrow morning",
+   "chat": "10/19/26, 5:30 PM - Secretary: water supply will be off on 22nd from 9 am to 1 pm for tank cleaning\n10/19/26, 5:32 PM - Mrs Rao: please store water, last time it ran dry\n10/19/26, 5:40 PM - Mr Nair: diwali cleanup committee meets saturday 6 pm at the clubhouse\n10/19/26, 5:41 PM - Mrs Iyer: who is collecting the 300 per flat for lights?\n10/19/26, 5:43 PM - Secretary: Mr Nair is collecting, pay by 25th\n10/19/26, 5:50 PM - Mr Gill: <Media omitted>\n10/19/26, 5:51 PM - Mr Gill: lift in block B stuck again\n10/19/26, 5:55 PM - Secretary: technician called, will come tomorrow morning\n10/19/26, 6:10 PM - Mrs Rao: good morning all\n10/19/26, 6:11 PM - Mr Nair: gm\n"
+  },
+  {
+   "sample": "study.txt",
+   "src": "gemma",
+   "secs": 3.1,
+   "gold": 4,
+   "hit": 4,
+   "missed": [],
+   "output": "13 messages, 3 people, 10/19/26, 10:00 PM to 10/19/26, 10:13 PM.\nGist: The group is discussing a work session involving database management and normalization notes, with a meeting scheduled.\nLines worth reading (verbatim):\n- Farah: dbms viva is on 28th, slot list is out\n- Gaurav: lol my slot is 9 am\n- Gaurav: can we share normalization notes?\n- Farah: yes i'll upload to the drive tonight\n- Hitesh: meet at library sunday 3 pm?",
+   "chat": "10/19/26, 10:00 PM - Farah: dbms viva is on 28th, slot list is out\n10/19/26, 10:01 PM - Gaurav: lol my slot is 9 am\n10/19/26, 10:02 PM - Farah: same\n10/19/26, 10:03 PM - Gaurav: haha\n10/19/26, 10:04 PM - Hitesh: bro\n10/19/26, 10:05 PM - Hitesh: i haven't started\n10/19/26, 10:06 PM - Farah: nobody has\n10/19/26, 10:07 PM - Gaurav: can we share normalization notes?\n10/19/26, 10:08 PM - Farah: yes i'll upload to the drive tonight\n10/19/26, 10:10 PM - Hitesh: meet at library sunday 3 pm?\n10/19/26, 10:11 PM - Gaurav: works\n10/19/26, 10:12 PM - Hitesh: ok\n10/19/26, 10:13 PM - Farah: thanks guys\n"
+  },
+  {
+   "sample": "trek.txt",
+   "src": "gemma",
+   "secs": 4.0,
+   "gold": 7,
+   "hit": 7,
+   "missed": [],
+   "output": "12 messages, 4 people, 10/19/26, 9:00 PM to 10/19/26, 9:23 PM.\nGist: The group is discussing a trip to the Kudremukh hill range, including transportation, costs, and logistics.\nLines worth reading (verbatim):\n- Karan: trek to Kudremukh is on 7th Nov, bus leaves 10 pm from Majestic\n- Leela: kitna lagega per head?\n- Karan: 2200 including guide and food\n- Zoha: i'm in. do we need to carry sleeping bags?\n- Karan: no, tents are provided but bring a torch\n- Leela: paying advance of 500 tonight\n- Karan: last date to pay balance is 3rd Nov\n- Pranav: is anyone bringing a first aid kit?\n- Leela: i will",
+   "chat": "10/19/26, 9:00 PM - Karan: trek to Kudremukh is on 7th Nov, bus leaves 10 pm from Majestic\n10/19/26, 9:02 PM - Leela: kitna lagega per head?\n10/19/26, 9:04 PM - Karan: 2200 including guide and food\n10/19/26, 9:05 PM - Zoha: i'm in. do we need to carry sleeping bags?\n10/19/26, 9:06 PM - Karan: no, tents are provided but bring a torch\n10/19/26, 9:10 PM - Leela: paying advance of 500 tonight\n10/19/26, 9:11 PM - Zoha: me too, google pay\n10/19/26, 9:15 PM - Pranav: <Media omitted>\n10/19/26, 9:16 PM - Pranav: that's the route map\n10/19/26, 9:20 PM - Karan: last date to pay balance is 3rd Nov\n10/19/26, 9:22 PM - Pranav: is anyone bringing a first aid kit?\n10/19/26, 9:23 PM - Leela: i will\n"
+  }
+ ]
+}

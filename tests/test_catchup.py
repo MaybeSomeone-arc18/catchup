@@ -61,3 +61,16 @@ def test_render_uses_valid_gist():
 def test_render_drops_bad_gist():
     out, src = render(parse(GOA), llm=Fake("Riya booked 5 tickets."))
     assert src == "rules" and "Gist" not in out
+
+def test_v3_problem_lines_kept():
+    c = parse("10/19/26, 9:00 AM - A: lift in block B stuck again\n10/19/26, 9:01 AM - B: lol")
+    assert digest_lines(c) == []
+    assert [m.text for m, _ in digest_lines(c, v3=True)] == ["lift in block B stuck again"]
+def test_v3_cap_is_12():
+    msgs = "\n".join(f"10/19/26, 9:{i:02d} PM - A: meet at {i%12+1} pm?" for i in range(30))
+    out, _ = render(parse(msgs))
+    assert out.count("\n- ") == 12
+
+def test_message_with_left_is_not_a_system_line():
+    c = parse("10/19/26, 9:00 AM - Ishaan: who has the cones? i left them at home\n10/19/26, 9:01 AM - Riya left")
+    assert [m.text for m in c.human] == ["who has the cones? i left them at home"]

@@ -27,7 +27,7 @@ footer{margin-top:56px;color:var(--muted);font-size:13px;border-top:1px solid va
 <p class="note">this page runs the rules digest only: verbatim lines worth reading, with who said them. the one-line gemma gist runs offline in the CLI; its real output on the samples is below.</p>
 <div class="brief" id="out"></div>
 <div id="samples"><h2 style="font-size:20px;margin-top:40px">what the cli printed</h2>
-<p class="note">v2 output on 12 synthetic chats (8 dev, tuned on; 4 held-out, written after the rules were frozen). gemma 3 1b q4_k_m via llama.cpp, 2-core 2 GB sandbox. the gist is a vague one-liner and can be slightly off; the verbatim lines are the part to trust. "recall" = gold strings found in the output, a proxy, not a quality score.</p></div>
+<p class="note">v3 output on 16 synthetic chats: dev (8, tuned on), set C (4, misses seen, so used), set D (4, written and gold frozen before v3 ran; used once a parser bug was fixed after its first run). gemma 3 1b q4_k_m via llama.cpp, 2-core 2 GB sandbox. the gist is a vague one-liner and can be slightly off; the verbatim lines are the part to trust. "recall" = gold strings found in the output, a proxy, not a quality score.</p></div>
 <footer>hacktoberfest week 3, slow and steady. open-weight model, plain rules, no servers.<br><a href="https://github.com/MaybeSomeone-arc18/catchup">code</a></footer>
 </main>
 <script src="app.js"></script><script src="precomputed.js"></script>
@@ -39,7 +39,7 @@ for(const s of PRECOMPUTED){const d=document.createElement("div");d.className="s
  const ok=s.src==="gemma";
  d.innerHTML=`<h3></h3><button class="ghost">load this chat</button><div style="height:10px"></div><span class="label ${ok?"":"fb"}"></span><div class="gemma"></div>`;
  d.querySelector("h3").textContent=s.name;
- d.querySelector(".label").textContent=ok?`${s.set==="heldout"?"held-out":"dev"} · gist accepted · ${s.secs}s · recall ${s.hit}/${s.gold}`:`${s.set==="heldout"?"held-out":"dev"} · rules only (no gist accepted) · ${s.secs}s · recall ${s.hit}/${s.gold}`;
+ d.querySelector(".label").textContent=ok?`${({dev:"dev (tuned)",heldout:"set C (used)",heldout_d:"set D"})[s.set]} · gist accepted · ${s.secs}s · recall ${s.hit}/${s.gold}`:`${({dev:"dev (tuned)",heldout:"set C (used)",heldout_d:"set D"})[s.set]} · rules only (no gist accepted) · ${s.secs}s · recall ${s.hit}/${s.gold}`;
  d.querySelector(".gemma").textContent=s.brief;
  d.querySelector("button").onclick=()=>{$("chat").value=s.chat;window.scrollTo({top:0,behavior:"smooth"});};
  $("samples").appendChild(d);}

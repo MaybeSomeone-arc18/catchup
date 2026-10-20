@@ -33,6 +33,8 @@ class Chat:
                 seen.append(m.sender)
         return seen
 
+STRONG_SYSTEM = ("end-to-end encrypted", "created group", "changed the subject")
+
 def is_system(text):
     t = text.lower()
     return any(h in t for h in SYSTEM_HINTS)
@@ -50,7 +52,8 @@ def parse(text):
                 sender, body = rest.split(": ", 1)
             else:
                 sender, body = "", rest
-            if is_system(body):
+            # only a line with no "name: " can be a system line; a chat message saying "i left them" is not
+            if (not sender and is_system(body)) or any(h in rest.lower() for h in STRONG_SYSTEM):
                 continue
             media = any(tok in body.lower() for tok in MEDIA_TOKENS)
             chat.messages.append(Message(m.group("date"), m.group("time"), sender.strip(), body.strip(), media))

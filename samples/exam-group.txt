@@ -1,0 +1,12 @@
+10/19/26, 11:30 PM - Prof Mehta: Reminder: assignment 4 deadline moved to wednesday 6 pm
+10/19/26, 11:31 PM - Karthik: does wednesday's test cover unit 5 as well?
+10/19/26, 11:33 PM - Prof Mehta: Units 3 and 4 only. Unit 5 will be in the next quiz
+10/19/26, 11:35 PM - Sneha: thank god
+10/19/26, 11:36 PM - Sneha: <Media omitted>
+10/19/26, 11:36 PM - Sneha: my notes for unit 3, in case anyone needs
+10/19/26, 11:38 PM - Karthik: you're a lifesaver
+10/19/26, 11:40 PM - Arjun: can someone explain the deadlock question from the sample paper?
+10/19/26, 11:52 PM - Sneha: it's the banker's algorithm one, check page 3 of my notes
+10/19/26, 11:55 PM - Arjun: got it, thanks!
+10/20/26, 12:03 AM - Karthik: study call tomorrow at 7 pm? library or online?
+10/20/26, 12:05 AM - Sneha: online works for me

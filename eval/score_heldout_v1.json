@@ -14,7 +14,7 @@
   {
    "sample": "office.txt",
    "src": "gemma",
-   "secs": 7.3,
+   "secs": 7.5,
    "gold": 6,
    "hit": 2,
    "missed": [
@@ -29,7 +29,7 @@
   {
    "sample": "society.txt",
    "src": "template",
-   "secs": 8.7,
+   "secs": 8.6,
    "gold": 7,
    "hit": 5,
    "missed": [
@@ -42,7 +42,7 @@
   {
    "sample": "study.txt",
    "src": "gemma",
-   "secs": 5.6,
+   "secs": 5.5,
    "gold": 4,
    "hit": 2,
    "missed": [
@@ -55,7 +55,7 @@
   {
    "sample": "trek.txt",
    "src": "gemma",
-   "secs": 8.3,
+   "secs": 8.0,
    "gold": 7,
    "hit": 1,
    "missed": [

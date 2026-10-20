@@ -1,0 +1,11 @@
+10/19/26, 10:02 PM - Aman: demo is thursday 11 am, slot 3
+10/19/26, 10:03 PM - Pooja: slides still not done, i have the intro and results
+10/19/26, 10:05 PM - Sid: i'll do the architecture slide tonight
+10/19/26, 10:06 PM - Aman: who is presenting the live demo?
+10/19/26, 10:08 PM - Pooja: sid, he wrote the backend
+10/19/26, 10:09 PM - Sid: fine but the server crashed twice today
+10/19/26, 10:12 PM - Aman: did you fix the db timeout?
+10/19/26, 10:14 PM - Sid: not yet, will push a fix by wednesday night
+10/19/26, 10:20 PM - Pooja: record a backup video just in case
+10/19/26, 10:21 PM - Aman: good idea, 2 min max
+10/19/26, 10:22 PM - Sid: <Media omitted>

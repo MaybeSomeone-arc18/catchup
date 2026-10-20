@@ -1,5 +1,5 @@
 """Score a catchup version on the sample chats.
-usage: python eval/score.py MODEL.gguf label v1|v2 dev|heldout
+usage: python eval/score.py MODEL.gguf label v1|v2|v3 dev|heldout|heldout_d
 recall = share of gold strings (eval/gold.json, written before measuring) found in the final output text.
 Short gold strings, case-insensitive substring match, so paraphrase can miss: that is strict on the model."""
 import json, os, statistics, sys, time
@@ -9,11 +9,14 @@ from catchup.parser import parse
 from llama_cpp import Llama
 ver = sys.argv[3]
 setname = sys.argv[4]
-SAMPLES = os.path.join(ROOT, "samples") if setname == "dev" else os.path.join(ROOT, "samples", "heldout")
-GOLD = os.path.join(ROOT, "eval", "gold.json" if setname == "dev" else "gold_heldout.json")
+SAMPLES = os.path.join(ROOT, "samples") if setname == "dev" else os.path.join(ROOT, "samples", {"heldout": "heldout", "heldout_d": "heldout_d"}[setname])
+GOLD = os.path.join(ROOT, "eval", {"dev": "gold.json", "heldout": "gold_heldout.json", "heldout_d": "gold_d.json"}[setname])
 if ver == "v1":
     from catchup.brief import make
     def render(chat, llm): return make(chat, llm=llm)
+elif ver == "v2":
+    from catchup.digest import render as _r
+    def render(chat, llm): return _r(chat, llm, v3=False)
 else:
     from catchup.digest import render
 gold = json.load(open(GOLD))

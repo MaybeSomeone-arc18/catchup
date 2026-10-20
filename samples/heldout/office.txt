@@ -1,0 +1,11 @@
+10/19/26, 11:00 AM - Manager Priya: standup moved to 10:30 tomorrow, join the usual link
+10/19/26, 11:02 AM - Deepak: can i skip? i have the dentist at 10
+10/19/26, 11:03 AM - Manager Priya: send me your update in writing then
+10/19/26, 11:10 AM - Anita: release is blocked on the payment bug, ETA wednesday evening
+10/19/26, 11:12 AM - Deepak: who owns the payment bug?
+10/19/26, 11:13 AM - Anita: me and Rohit
+10/19/26, 11:20 AM - Rohit: found the cause, a null in the webhook. fix in review
+10/19/26, 11:21 AM - Manager Priya: great. reviewers please look today
+10/19/26, 11:30 AM - Deepak: reviewing now
+10/19/26, 2:00 PM - Manager Priya: client call friday 4 pm, Anita please prepare the demo
+10/19/26, 2:01 PM - Anita: ok

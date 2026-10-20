@@ -1,0 +1,59 @@
+{
+ "summary": {
+  "version": "v2",
+  "set": "heldout_d",
+  "model": "gemma3-1b-q4",
+  "samples": 4,
+  "gold_total": 20,
+  "gold_hit": 18,
+  "recall": 0.9,
+  "model_used": 4,
+  "median_secs": 3.7
+ },
+ "rows": [
+  {
+   "sample": "hostel.txt",
+   "src": "gemma",
+   "secs": 4.3,
+   "gold": 5,
+   "hit": 5,
+   "missed": [],
+   "output": "11 messages, 3 people, 10/20/26, 6:02 AM to 10/20/26, 6:44 AM.\nGist: The group is discussing plans for a Sunday lunch at a dhaba, and discussing laundry pickup schedules.\nLines worth reading (verbatim):\n- Kabir: guys the mess is closed on sunday, forgot to tell you\n- Nitin: so where do we eat? i can't cook\n- Kabir: there's the dhaba near gate 2, it opens at 8 am\n- Zoya: menu from the dhaba, thali is 120\n- Nitin: ok sunday lunch there then, who's coming?\n- Zoya: he said technician comes monday\n- Nitin: lol monday\n- Kabir: put your room numbers on the sheet for the laundry pickup by friday 5 pm",
+   "chat": "10/20/26, 6:02 AM - Kabir: guys the mess is closed on sunday, forgot to tell you\n10/20/26, 6:05 AM - Nitin: so where do we eat? i can't cook\n10/20/26, 6:10 AM - Kabir: there's the dhaba near gate 2, it opens at 8 am\n10/20/26, 6:11 AM - Zoya: <Media omitted>\n10/20/26, 6:12 AM - Zoya: menu from the dhaba, thali is 120\n10/20/26, 6:20 AM - Nitin: ok sunday lunch there then, who's coming?\n10/20/26, 6:24 AM - Kabir: me and arjun\n10/20/26, 6:30 AM - Zoya: also the wifi is down on floor 3 since last night, i called the warden\n10/20/26, 6:31 AM - Zoya: he said technician comes monday\n10/20/26, 6:40 AM - Nitin: lol monday\n10/20/26, 6:44 AM - Kabir: put your room numbers on the sheet for the laundry pickup by friday 5 pm\n"
+  },
+  {
+   "sample": "rent.txt",
+   "src": "gemma",
+   "secs": 3.9,
+   "gold": 5,
+   "hit": 4,
+   "missed": [
+    "compressor"
+   ],
+   "output": "10 messages, 3 people, 10/20/26, 8:10 PM to 10/20/26, 8:31 PM.\nGist: The group discusses a landlord issue \u2013 a loud refrigerator, gas shortage, and a scheduled visit from the landlord.\nLines worth reading (verbatim):\n- Aman: rent for november is 18000, please pay by 2nd\n- Aman: i'll call the landlord, what time are you home tomorrow?\n- Veer: after 7 pm\n- Aman: perfect, i'll tell him to come at noon\n- Veer: also we're out of cooking gas, cylinder arrives saturday morning",
+   "chat": "10/20/26, 8:10 PM - Aman: rent for november is 18000, please pay by 2nd\n10/20/26, 8:12 PM - Tara: i paid my share already, check your account\n10/20/26, 8:15 PM - Aman: got it, thanks\n10/20/26, 8:20 PM - Veer: the fridge is making a loud noise again\n10/20/26, 8:21 PM - Tara: i think the compressor is going\n10/20/26, 8:25 PM - Aman: i'll call the landlord, what time are you home tomorrow?\n10/20/26, 8:26 PM - Veer: after 7 pm\n10/20/26, 8:27 PM - Tara: i work from home, i can let him in\n10/20/26, 8:30 PM - Aman: perfect, i'll tell him to come at noon\n10/20/26, 8:31 PM - Veer: also we're out of cooking gas, cylinder arrives saturday morning\n"
+  },
+  {
+   "sample": "sports.txt",
+   "src": "gemma",
+   "secs": 3.5,
+   "gold": 5,
+   "hit": 4,
+   "missed": [
+    "cones"
+   ],
+   "output": "8 messages, 4 people, 10/20/26, 7:00 PM to 10/20/26, 7:25 PM.\nGist: The group is discussing logistics for a match \u2013 kit arrangements, bus transportation, and payment details.\nLines worth reading (verbatim):\n- Coach: practice moved to 6 am this saturday, ground 2 is booked for the match\n- Ishaan: sir, do we bring our own kits?\n- Coach: yes, and bring water, no vending machine\n- Dhruv: i'll bring them\n- Coach: the match is against st marks on 2nd november, 4 pm, bus leaves college at 2\n- Meera: do we have to pay for the bus?\n- Coach: 150 each, give it to dhruv by thursday",
+   "chat": "10/20/26, 7:00 PM - Coach: practice moved to 6 am this saturday, ground 2 is booked for the match\n10/20/26, 7:03 PM - Ishaan: sir, do we bring our own kits?\n10/20/26, 7:05 PM - Coach: yes, and bring water, no vending machine\n10/20/26, 7:06 PM - Meera: lol ok\n10/20/26, 7:10 PM - Ishaan: who's taking the cones? i left them at home\n10/20/26, 7:15 PM - Dhruv: i'll bring them\n10/20/26, 7:20 PM - Coach: the match is against st marks on 2nd november, 4 pm, bus leaves college at 2\n10/20/26, 7:21 PM - Meera: do we have to pay for the bus?\n10/20/26, 7:25 PM - Coach: 150 each, give it to dhruv by thursday\n"
+  },
+  {
+   "sample": "thesis.txt",
+   "src": "gemma",
+   "secs": 3.4,
+   "gold": 5,
+   "hit": 5,
+   "missed": [],
+   "output": "10 messages, 3 people, 10/20/26, 9:00 AM to 10/20/26, 9:31 AM.\nGist: The group discusses a thesis deadline, meeting schedules, and library procedures.\nLines worth reading (verbatim):\n- Dr Rao: reminder, thesis draft chapter 2 is due on 3rd november\n- Pooja: sir, does that include the literature review?\n- Dr Rao: yes, and the references must be in IEEE format\n- Imran: my advisor meeting got moved to thursday 11 am, anyone else?\n- Pooja: mine is also thursday, at 2:30 pm\n- Dr Rao: the library closes early on friday, plan your book returns before 4 pm",
+   "chat": "10/20/26, 9:00 AM - Dr Rao: reminder, thesis draft chapter 2 is due on 3rd november\n10/20/26, 9:04 AM - Pooja: sir, does that include the literature review?\n10/20/26, 9:10 AM - Dr Rao: yes, and the references must be in IEEE format\n10/20/26, 9:11 AM - Pooja: ok\n10/20/26, 9:15 AM - Imran: my advisor meeting got moved to thursday 11 am, anyone else?\n10/20/26, 9:17 AM - Pooja: mine is also thursday, at 2:30 pm\n10/20/26, 9:20 AM - Imran: <Media omitted>\n10/20/26, 9:21 AM - Imran: template for the references file, use this\n10/20/26, 9:30 AM - Dr Rao: the library closes early on friday, plan your book returns before 4 pm\n10/20/26, 9:31 AM - Imran: thanks sir\n"
+  }
+ ]
+}

@@ -14,7 +14,7 @@
   {
    "sample": "club.txt",
    "src": "rules",
-   "secs": 5.6,
+   "secs": 5.4,
    "gold": 6,
    "hit": 6,
    "missed": [],
@@ -24,7 +24,7 @@
   {
    "sample": "cricket.txt",
    "src": "gemma",
-   "secs": 4.0,
+   "secs": 3.9,
    "gold": 5,
    "hit": 5,
    "missed": [],
@@ -34,7 +34,7 @@
   {
    "sample": "exam-group.txt",
    "src": "gemma",
-   "secs": 4.2,
+   "secs": 4.0,
    "gold": 5,
    "hit": 5,
    "missed": [],
@@ -64,7 +64,7 @@
   {
    "sample": "goa-trip.txt",
    "src": "gemma",
-   "secs": 5.8,
+   "secs": 6.0,
    "gold": 6,
    "hit": 4,
    "missed": [
@@ -77,7 +77,7 @@
   {
    "sample": "project-team.txt",
    "src": "gemma",
-   "secs": 3.6,
+   "secs": 3.8,
    "gold": 5,
    "hit": 5,
    "missed": [],

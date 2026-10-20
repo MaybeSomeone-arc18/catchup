@@ -1,0 +1,5 @@
+c518e7648c4a7dfc52ef475aa162347bbf780879  eval/gold_d.json
+28bb875c087ac72edd52caf5cd231048b1b38344  samples/heldout_d/hostel.txt
+5d101f8f0bbee71373fc25794fefc87e3cb71e36  samples/heldout_d/rent.txt
+cc0f355b62bb66abe88ab64ccb335447210ad51a  samples/heldout_d/sports.txt
+96978ddd087dedc0eb91d121d68dd8b5b0edab2f  samples/heldout_d/thesis.txt
